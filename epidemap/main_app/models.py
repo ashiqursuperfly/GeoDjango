@@ -1,11 +1,13 @@
 from django.db import models
+from django.contrib.gis.db import models as geomodels
 from .consts import ModelConstants
 
 # Create your models here.
 
 class Incidences(models.Model):
-    name = models.CharField(max_length=200, db_column = ModelConstants.Incidences.DB_COL_NAME)
-    location = models.CharField(max_length=20, db_column = ModelConstants.Incidences.DB_COL_LOCATION)
+    name = models.CharField(max_length=200)
+    location = geomodels.PointField(srid=4326)
+    objects = geomodels.Manager()
 
     def __str__(self):
         return self.name

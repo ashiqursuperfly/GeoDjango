@@ -52,3 +52,33 @@
 
 ### python manage.py migrate my_app zero
 
+
+# POSTGRES
+## <B>Install</B>: sudo apt-get install postgresql postgresql-contrib
+## <B>Installing PostGis </B>: required for geoDjango: sudo apt install postgis 
+
+## <B>Logging into postresql shell(terminal based alternative to pg-admin):</B>
+### 1. sudo su postgres
+### 2. psql (doesnt connect to a specific db, connects to pgAdmin)
+### 3. In order to connect to a specific db: psql -d <database_name> -U  <user_name> -W
+##  PSQL Commands: https://www.postgresqltutorial.com/psql-commands/
+
+## Creating a database: First log in to psql with 
+### 1. create database epidemap
+
+### DJANGO
+## POSTGIS: 
+
+`python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'epidemap',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': 'postgres',
+        'PORT': '5432',
+    }
+}
+`
+
