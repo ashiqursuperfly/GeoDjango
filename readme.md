@@ -69,7 +69,7 @@
 ### DJANGO
 ## POSTGIS: 
 
-`python
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -80,5 +80,5 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-`
+```
 
