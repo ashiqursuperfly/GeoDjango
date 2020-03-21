@@ -126,3 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (23.4,90.3),
+    'DEFAULT_ZOOM': 7,
+    'MAX_ZOOM': 20,
+    'MIN_ZOOM': 5,
+    'SCALE': 'both',
+    'ATTRIBUTION_PREFIX' : 'ashiqursuperfly',
+}
